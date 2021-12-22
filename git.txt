@@ -1,0 +1,1 @@
+Primero crear repositorio en github, abrir el código y copiar el ssh
