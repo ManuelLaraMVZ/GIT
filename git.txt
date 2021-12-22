@@ -1,1 +1,124 @@
 Primero crear repositorio en github, abrir el código y copiar el ssh
+
+poner en la consola "git clone shh" en ssh poner lo que copiamos de github
+
+dar enter
+
+una vez que se agregó, entonces poner ls, para verificar que se haya creado el archivo 
+________________________________________________________
+mlara@Ubu16:~$ ls
+clave             Downloads         Pictures   usr
+clave.pub         examples.desktop  pimpon     Videos
+covidrepositorio  GIT               Public
+Desktop           Music             README
+Documents         Mytest            Templates
+________________________________________________________
+
+abrir el archivo creado usando : cd GIT
+ y poner ls para verificar que tenga el readme
+
+_______________________________________________________
+
+mlara@Ubu16:~/GIT$ ls
+README.md
+_______________________________________________________
+
+generar un archivo de texto con las primeras palabras utilizando el comando echo "XXX" >> ARCHIVO.txt
+
+>> sirve para que indicarle donde queremos que se vaya el texto, si hay uno lo pone ahí, si no lo crea.
+
+verificamos la creación con el ls
+
+_______________________________________________________
+
+mlara@Ubu16:~/GIT$ echo "Inicio" >> Prueba.txt
+mlara@Ubu16:~/GIT$ ls
+Prueba.txt  README.md
+_______________________________________________________
+
+Podemos verificar lo qu econtiene el archivo nuevo poniendo: cat Prueba.txt
+_______________________________________________________
+
+mlara@Ubu16:~/GIT$ cat Prueba.txt
+Inicio
+_______________________________________________________
+
+para saber su status en git, poner: git status
+Nos dirá que se creó pero no se ha subido al repositorio en linea, además el nombre del archivo sale en rojo
+__________________________________________________________
+
+mlara@Ubu16:~/GIT$ git status
+On branch main
+Your branch is up-to-date with 'origin/main'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Prueba.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+__________________________________________________________
+
+Para agregar el archivo a GIT, poner: git add "Nombre archivo y extensión"
+Despues get status para saber si ya se incuyó, debe de cambiar a verde
+__________________________________________________________
+
+
+mlara@Ubu16:~/GIT$ git add Prueba.txt
+mlara@Ubu16:~/GIT$ git status
+On branch main
+Your branch is up-to-date with 'origin/main'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Prueba.txt
+____________________________________________________________
+
+ahora tenemos que comprobar que los queremos subir y decirle los cambios que queremos hacer con: git commit -m "Comentarios"
+____________________________________________________________
+mlara@Ubu16:~/GIT$ git commit -m "Pasos"
+[main e2a419a] Pasos
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Prueba.txt
+____________________________________________________________
+
+Para subirlo al repositorio en linea hay que poner: git push
+____________________________________________________________
+
+mlara@Ubu16:~/GIT$ git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 3, done.
+Delta compression using up to 3 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 319 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:ManuelLaraMVZ/GIT.git
+   e51a81c..e2a419a  main -> main
+_________________________________________________________________
+
+Verificar su creación en linea
+
+
+
+
+Fin
