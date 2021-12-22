@@ -38,21 +38,34 @@ mlara@Ubu16:~/GIT$ git commit -m "prueba borrar"
 mlara@Ubu16:~/GIT$ git push
 _______________________________________________
 
-Nos preparamos para borrar el archivo con: rm pruebab.txt
+Nos preparamos para borrar el archivo en git con: git rm pruebab.txt
 ________________________________________________
 
-mlara@Ubu16:~/GIT$ rm pruebab.txt
+mlara@Ubu16:~/GIT$ git rm pruebab.txt
+rm 'pruebab.txt'
+
 mlara@Ubu16:~/GIT$ git status
 On branch main
 Your branch is up-to-date with 'origin/main'.
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
 
 	deleted:    pruebab.txt
+
+mlara@Ubu16:~/GIT$ git commit -m "borrado"
+
+[main a672c6e] borrado
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 pruebab.txt
+
+mlara@Ubu16:~/GIT$ git push
+
 ________________________________________________
 
-adicionar los cambios
+verificar los cambios en github
+
+Nota: si no se pone git en git rm "archivo", entonces solo se borra en nuestra computadora
+
 
 
 
