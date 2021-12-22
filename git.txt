@@ -122,3 +122,4 @@ Verificar su creación en linea
 
 
 Fin
+Nota: tambien de puede modificar el archivo desde la carpeta y solo subir la modificación que queremos mediante git add 'Nombre del archivo.txt' luego git commit-m comentario y finalmente git push
